@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+	<script type="text/html" id="test">
+	{{each item}}
+		<p class="tit"> {{$value.title}}</p>
+		
+		<p class="con">{{include 'list' $value.list}}</p>
+	{{/each}}
+	</script>
+	<script type="text/html" id="list">
+	{{each list}}
+		<span>aa{{$index}}</span>
+	{{/each}}
+	</script>
+</body>
+</html>
